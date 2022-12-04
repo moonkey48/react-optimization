@@ -13,7 +13,7 @@ const User = ({ resource }: UserProps) => {
     return (
         <div>
             <h3>{user.name} ({user.email})이 작성한 글</h3>
-            <Suspense fallback={<Loading loadDataName='posts'/>}>
+            <Suspense fallback={<Loading loadDataName='posts' />}>
                 <Posts resource={resource} />
             </Suspense>
         </div>
